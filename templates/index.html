@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Souris' Mousetrap </title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sacramento&display=swap" rel="stylesheet">
+
+<style>
+body{
+background-image: url('https://i.imgur.com/A6xdkX0.jpg');
+margin: 0px;
+color: #613f3f;
+overflow-x: hidden;
+}
+
+#topborder{
+background-image: url('https://i.imgur.com/0vWS1mg.png');
+background-repeat: repeat-x;
+height: 73px;
+width: 100vw;
+position: fixed;
+top: 0px;
+z-index: 3;
+}
+
+#bottomborder{
+background-image: url('https://i.imgur.com/lv5pt9F.png');
+background-repeat: repeat-x;
+height: 73px;
+width: 100vw;
+position: fixed;
+bottom: 0px;
+z-index: 3;
+}
+
+#all{
+background-color: #aaa;
+width: 800px;
+margin: 0 auto;
+}
+
+#side{
+width: 175px;
+margin-top: 135px;
+float: left;
+position: fixed;
+}
+
+#profile{
+background-color: #fefefe;
+border-radius: 10px;
+width: 145px;
+margin-bottom: 25px;
+padding: 15px;
+}
+
+#pfp{
+background-image: url('https://i.imgur.com/ZlderV2.png');
+width: 145px;
+height: 145px;
+border-radius: 10px;
+opacity: 0.9;
+}
+
+#profiletext{
+margin: 0px;
+letter-spacing: 1px;
+text-align: justify;
+font-size: 14px;
+padding: 15px 5px 0px 5px;
+color: #856d6d;
+}
+
+#nav{
+background-color: #fefefe;
+width: 175px;
+border-radius: 10px;
+position: relative;
+}
+
+#navheader{
+border-bottom: 3px solid #cdb5b5;
+margin: 0px;
+line-height: 10px;
+padding-left: 5px;
+padding-top: 15px;
+font-family: 'Sacramento', cursive;
+color: #578EA3;
+}
+
+#navbow{
+background-image: url('https://i.imgur.com/2IzDDAz.png');
+background-size: 100%;
+background-repeat: no-repeat;
+width: 65px;
+height: 41px;
+position: absolute;
+right: 9px;
+top: 14px;
+z-index: 2;
+}
+
+ul{
+margin: 0px;
+padding: 13px 10px 10px 16px;
+}
+
+li{
+list-style-type: none;
+margin: -10px;
+letter-spacing: -1px;
+font-size: 18px;
+}
+
+#main{
+width: 605px;
+float: right;
+position: relative;
+}
+
+#title{
+font-family: 'Sacramento', Cursive;
+border-bottom: 3px solid #cdb5b5;
+line-height: 15px;
+width: 600px;
+margin: 0px;
+color: #578EA3;
+background-color: #fefefe;
+position: absolute;
+top: 74px;
+border-radius: 10px 10px 0px 0px;
+padding-left: 5px;
+padding-top: 22px;
+}
+
+#bow{
+background-image: url('https://i.imgur.com/GOQMFVP.png');
+background-size: 100%;
+background-repeat: no-repeat;
+width: 160px;
+height: 102px;
+position: absolute;
+right: 45px;
+top: 81px;
+z-index: 2;
+}
+
+#content{
+background-color: #fefefe;
+position: absolute;
+top: 114px;
+width: 575px;
+padding: 15px 15px 73px 15px;
+}
+
+.entry{
+width: 575px;
+}
+
+.entryhead{
+width: 575px;
+height: 80px;
+position: relative;
+border-bottom: 1px dotted #613f3f;
+padding-bottom: 5px;
+}
+
+.icon{
+width: 80px;
+opacity: 0.9;
+}
+
+.date{
+position: absolute;
+bottom: 0;
+left: 85px;
+padding-bottom: 5px;
+}
+
+.date p{
+margin: 0px;
+letter-spacing: -1px;
+color: #856d6d;
+}
+
+.datecolor{
+color: #578EA3;
+}
+
+.header{
+position: absolute;
+bottom: 0;
+right: 0;
+}
+
+.header h2{
+margin: 0px;
+font-family: 'Sacramento', cursive;
+line-height: 23px;
+font-size: 26px;
+color: #578EA3;
+}
+
+.text{
+text-align: justify;
+margin-top: 5px;
+letter-spacing: 1px;
+color: #856d6d;
+}
+
+a{
+text-decoration: none;
+color: #613f3f;
+font-family: 'Sacramento', Cursive;
+}
+
+a:visited{
+color: #613f3f;
+}
+
+a:hover{
+font-style: italic;
+}
+
+a:active{
+font-style: italic;
+font-weight: bold;
+}
+
+::-webkit-scrollbar{
+width: 6px; 
+}
+    
+::-webkit-scrollbar-track{
+background-color: #578EA3;
+}
+
+::-webkit-scrollbar-thumb{
+background-color: #cdb5b5;
+}
+
+#credit{
+font-size: 12px;
+position: fixed;
+bottom: 70px;
+right: 0;
+}
+
+</style>
+<link rel="icon" type="image/png" href="https://neothemes.neocities.org/images/favicon.gif" />
+</head>
+
+<body>
+
+<div id="topborder"></div>
+<div id="bottomborder"></div>
+
+<div id="all">
+
+<div id="side">
+
+<div id="profile">
+<div id="pfp"></div> <!-- see "#pfp" in CSS, 145x145px -->
+<p id="profiletext">Souris' landing page</p>
+</div>
+
+<div id="nav">
+<div id="navbow"></div>
+<h2 id="navheader">Nav Here </h2>
+
+<ul>
+<li>♡ <a href="URL HERE">Link 1</a></li>
+<li>♡ <a href="URL HERE">Link 2</a></li>
+<li>♡ <a href="URL HERE">Link 3</a></li>
+<li>♡ <a href="URL HERE">Link 4</a></li>
+<li>♡ <a href="URL HERE">Link 5</a></li>
+<li>♡ <a href="URL HERE">Link 6</a></li>
+<li>♡ <a href="URL HERE">Link 7</a></li>
+</ul>
+</div>
+
+</div>
+
+<div id="main">
+
+<div id="bow"></div>
+
+<h1 id="title">Souris' Mousetrap</h1> 
+
+<div id="content">
+
+<!-- ENTRY START -->
+
+<div class="entry">
+
+<div class="entryhead">
+<div class="icon">
+<img src="https://i.imgur.com/oOPh2V0.jpg" width="80px">
+</div>
+<div class="date">
+<p><span class="datecolor"><b>Date:</b></span> 07/07/2024 </p>
+<p><span class="datecolor"><b>Mood:</b></span> wistful </p>
+</div>
+<div class="header">
+<h2> cute </h2>
+</div>
+</div>
+
+<div class="text">
+<p style="margin:0px;">
+  Test
+</p>
+  
+<p> </p>
+
+<p></p>
+</div>
+
+</div>
+
+<!-- ENTRY END -->
+
+
+<!-- ENTRY START -->
+<!-- 
+<div class="entry">
+
+<div class="entryhead">
+<div class="icon">
+<img src="https://i.imgur.com/oOPh2V0.jpg" width="80px">
+</div>
+<div class="date">
+<p><span class="datecolor"><b>Date:</b></span> 05/16/2022</p>
+<p><span class="datecolor"><b>Mood:</b></span> jkklajfejsjf</p>
+</div>
+<div class="header">
+<h2>Header Here</h2>
+</div>
+</div>
+
+<div class="text">
+<p style="margin:0px;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam vitae urna porttitor, dapibus risus eget, efficitur massa. Mauris orci dui, fringilla id urna quis, cursus rhoncus lorem. Cras blandit ultricies lectus.</p>
+
+<p>Aenean elementum metus felis, in condimentum ante luctus et. Pellentesque ultrices diam nec fringilla ullamcorper. Morbi porta sem ac eros sollicitudin dignissim. Vestibulum tincidunt enim quis rutrum consequat.</p>
+
+<p>In pulvinar in eros ullamcorper sollicitudin. Phasellus imperdiet vulputate sapien nec eleifend.</p>
+</div>
+
+</div>
+--> 
+<!-- ENTRY END -->
+
+
+<!-- ENTRY START -->
+<!-- 
+<div class="entry">
+
+<div class="entryhead">
+<div class="icon">
+<img src="https://i.imgur.com/oOPh2V0.jpg" width="80px">
+</div>
+<div class="date">
+<p><span class="datecolor"><b>Date:</b></span> 05/16/2022</p>
+<p><span class="datecolor"><b>Mood:</b></span> jkklajfejsjf</p>
+</div>
+<div class="header">
+<h2>Header Here</h2>
+</div>
+</div>
+
+<div class="text">
+<p style="margin:0px;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam vitae urna porttitor, dapibus risus eget, efficitur massa. Mauris orci dui, fringilla id urna quis, cursus rhoncus lorem. Cras blandit ultricies lectus.</p>
+
+<p>Aenean elementum metus felis, in condimentum ante luctus et. Pellentesque ultrices diam nec fringilla ullamcorper. Morbi porta sem ac eros sollicitudin dignissim. Vestibulum tincidunt enim quis rutrum consequat.</p>
+
+<p>In pulvinar in eros ullamcorper sollicitudin. Phasellus imperdiet vulputate sapien nec eleifend.</p>
+</div>
+
+</div>
+--> 
+<!-- ENTRY END -->
+
+
+<!-- ENTRY START -->
+<!-- 
+<div class="entry">
+
+<div class="entryhead">
+<div class="icon">
+<img src="https://i.imgur.com/oOPh2V0.jpg" width="80px">
+</div>
+<div class="date">
+<p><span class="datecolor"><b>Date:</b></span> 05/16/2022</p>
+<p><span class="datecolor"><b>Mood:</b></span> jkklajfejsjf</p>
+</div>
+<div class="header">
+<h2>Header Here</h2>
+</div>
+</div>
+
+<div class="text">
+<p style="margin:0px;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam vitae urna porttitor, dapibus risus eget, efficitur massa. Mauris orci dui, fringilla id urna quis, cursus rhoncus lorem. Cras blandit ultricies lectus.</p>
+
+<p>Aenean elementum metus felis, in condimentum ante luctus et. Pellentesque ultrices diam nec fringilla ullamcorper. Morbi porta sem ac eros sollicitudin dignissim. Vestibulum tincidunt enim quis rutrum consequat.</p>
+
+<p>In pulvinar in eros ullamcorper sollicitudin. Phasellus imperdiet vulputate sapien nec eleifend.</p>
+</div>
+
+</div>
+--> 
+<!-- ENTRY END -->
+
+
+</div>
+
+</div>
+
+</div>
+
+<div id="credit"><a href="https://repth.neocities.org/index.html">©repth</a></div>
+
+</body>
+
+</html>

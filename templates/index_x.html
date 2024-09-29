@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Love+Ya+Like+A+Sister&display=swap" rel="stylesheet">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Questrial&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+box-sizing: border-box;
+margin: 0;
+padding: 0;
+}
+
+body{
+background-color: #FBFAF0;
+font-family: 'Questrial', sans-serif;
+font-size: 16px;
+color: #532635;
+margin: 5%;
+}
+
+.container{
+display: flex;
+flex-direction: row;
+gap: 1rem;
+max-width: 800px;
+margin: 0 auto;
+}
+
+.imgwrapper{
+display: flex;
+flex-grow: 1;
+flex-basis: 0;
+}
+
+.img{
+align-self: center;
+width: 100%;
+min-width: 200px;
+}
+
+.main{
+display: flex;
+flex-direction: column;
+flex-grow: 3;
+flex-basis: 0;
+justify-content: space-between;
+gap: 1rem;
+}
+
+.box{
+display: flex;
+gap: 1rem;
+}
+
+.boximg{
+align-self: center;
+width: 200px;
+}
+
+.content{
+flex-grow: 6;
+flex-basis: 0;
+min-width: 220px;
+height: 220px;
+border: 2px solid #5D1838;
+padding: 1rem;
+overflow: scroll;
+overflow-x: hidden;
+text-align: justify;
+line-height: 1.1;
+display: flex;
+flex-direction: column;
+gap: 0.5rem;
+}
+
+.headers{
+font-size: 20px;
+text-align: right;
+font-weight: normal;
+font-family: 'Love Ya Like A Sister', sans-serif;
+border-bottom: 2px dotted #5D1838;
+}
+
+a{
+text-decoration: none;
+color: #903643;
+}
+
+a:visited{
+color: #903643;
+}
+
+a:hover{
+font-style: italic;
+}
+
+a:active{
+font-style: italic;
+font-weight: bold;
+}
+
+::-webkit-scrollbar{
+width: 6px; 
+}
+    
+::-webkit-scrollbar-track{
+background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb{
+background-color: #5D1838;
+}
+
+#credit{
+font-size: 12px;
+position: fixed;
+bottom: 0px;
+right: 0;
+}
+
+@media(max-width:730px){
+.box img{
+display: none;
+}
+}
+
+@media(max-width:515px){
+.container{
+flex-direction: column;
+}
+.img{
+width: 40%;
+min-width: 40%;
+margin: 0 auto;
+}
+}
+
+</style>
+<link rel="icon" type="image/png" href="https://neothemes.neocities.org/images/favicon.gif" />
+</head>
+
+<body>
+
+<div class="container">
+
+<!-- LEFT IMAGE -->
+<div class="imgwrapper">
+<img class="img" src="https://i.imgur.com/AlqEHuX.png">
+</div>
+
+<div class="main">
+
+<!-- BOX 1 -->
+<div class="box">
+<div class="content">
+<h2 class="headers">About</h2>
+<p><b>Note</b>: If you replace the image to the left but it looks too small, go to the '.imgwrapper' selector and increase the flex-grow property.</p>
+
+<p>If you want to change the image size on mobile version, go to the '@media(max-width:515px)' selector and change the widths for the '.img' selector accordingly. ♡</p>
+</div>
+<!-- BOX 1 IMAGE -->
+<img class="boximg" src="https://i.imgur.com/hjwRH7Z.png">
+</div>
+
+<!-- BOX 2 -->
+<div class="box">
+<!-- BOX 2 IMAGE -->
+<img class="boximg" src="https://i.imgur.com/hjwRH7Z.png">
+<div class="content">
+<h2 class="headers">Interests</h2>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum quam dolor, efficitur ullamcorper lobortis a, sodales et dui. Ut semper ante vel pulvinar hendrerit. Duis metus sem, eleifend et lectus nec, ultrices vestibulum massa. Curabitur quis ante eros. Aenean interdum est a massa hendrerit, id fermentum nulla viverra. In at vulputate orci. Aenean malesuada rutrum consectetur. Phasellus accumsan neque sem, vel malesuada mauris tempus quis. Aenean id tempor augue. Vestibulum consectetur neque ac tristique egestas. Duis porttitor neque eget ligula ultrices rhoncus.</p>
+
+<p>Curabitur porttitor eleifend tellus, et vestibulum eros tempus quis. Duis ac quam massa. Cras nec fringilla tellus. In et erat odio. Sed sit amet justo ut mi semper ultricies. Vestibulum tristique orci eget magna molestie maximus. Donec vitae purus luctus, sodales lorem vitae, hendrerit ipsum. Aenean vulputate at urna consectetur euismod. Vivamus fringilla, lorem nec condimentum eleifend, magna elit aliquam odio, non auctor erat nisl eu urna. Ut nec tellus vitae velit maximus fringilla. Quisque hendrerit neque sit amet urna posuere dictum ac sit amet nulla.</p>
+</div>
+</div>
+
+
+<!-- BOX 3 -->
+<div class="box">
+<div class="content">
+<h2 class="headers">Other</h2>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum quam dolor, efficitur ullamcorper lobortis a, sodales et dui. Ut semper ante vel pulvinar hendrerit. Duis metus sem, eleifend et lectus nec, ultrices vestibulum massa. Curabitur quis ante eros. Aenean interdum est a massa hendrerit, id fermentum nulla viverra. In at vulputate orci. Aenean malesuada rutrum consectetur. Phasellus accumsan neque sem, vel malesuada mauris tempus quis. Aenean id tempor augue. Vestibulum consectetur neque ac tristique egestas. Duis porttitor neque eget ligula ultrices rhoncus.</p>
+
+<p>Curabitur porttitor eleifend tellus, et vestibulum eros tempus quis. Duis ac quam massa. Cras nec fringilla tellus. In et erat odio. Sed sit amet justo ut mi semper ultricies. Vestibulum tristique orci eget magna molestie maximus. Donec vitae purus luctus, sodales lorem vitae, hendrerit ipsum. Aenean vulputate at urna consectetur euismod. Vivamus fringilla, lorem nec condimentum eleifend, magna elit aliquam odio, non auctor erat nisl eu urna. Ut nec tellus vitae velit maximus fringilla. Quisque hendrerit neque sit amet urna posuere dictum ac sit amet nulla.</p>
+</div>
+<!-- BOX 3 IMAGE -->
+<img class="boximg" src="https://i.imgur.com/hjwRH7Z.png">
+</div>
+
+</div>
+
+</div>
+
+<div id="credit"><a href="https://repth.neocities.org/index.html">©repth</a></div>
+
+</body>
+
+</html>
